@@ -9,8 +9,8 @@
 ```npm i gulp -g```
 [https://gulpjs.com/](https://gulpjs.com/)
 
-##### 4. Go to project root and install node_modules
-```npm i```
+##### 4. Go to project root and install node_modules / bower_components
+```npm i``` and ```bower i``` 
 
 ##### 5. In project root run gulp
 ```gulp```

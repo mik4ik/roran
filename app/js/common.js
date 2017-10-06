@@ -94,8 +94,6 @@ $(document).ready(function() {
             });
         } else if ($(window).width() > 768 && $('.m-btn').length) {
             $('.m-btn').remove();
-            $('.c-nav').style();
-
         }
     }
     btnMobile();
