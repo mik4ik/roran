@@ -1,0 +1,52 @@
+.b-services
+  margin: 60px 0 -60px 0
+  @extend %clearfix
+
+  &__item
+    position: relative
+    padding: 0 10px 0 85px
+    margin-bottom: 60px
+    text-align: left
+    +col(3, 3, 2, 1)
+
+  &__icon
+    position: absolute
+    top: 0
+    left: 0
+    width: 85px
+    padding-right: 5px
+
+    i
+      display: block
+      margin: 0 auto
+
+  &__title
+    position: relative
+    padding-bottom: 13px
+    margin-bottom: 25px
+    font-size: 18px
+
+    &:after
+      content: ''
+      position: absolute
+      width: 80px
+      height: 1px
+      bottom: 0
+      left: 0
+      background: #d8d8d8
+
+    strong
+      color: $color-base
+
+  &__text
+    font-size: 13px
+    text-align: left
+    line-height: 18px
+    color: $gray
+
+  @media #{$tablet}
+    margin: 40px 0 -40px 0
+
+    &__item
+      margin-bottom: 40px
+

@@ -1,0 +1,82 @@
+.b-team
+  &__wrap
+    position: relative
+    padding: 55px 0 40px
+    margin-top: 55px
+    background: #f0f0f0
+    overflow: hidden
+    &:after
+      content: ''
+      position: absolute
+      display: inline-block
+      top: -60px
+      left: 50%
+      border: 30px solid transparent
+      border-bottom: 30px solid #f0f0f0
+      transform: translate(-50%)
+
+    .b-container
+      position: relative
+
+    .lSSlideOuter
+      .lSSlideWrapper
+        margin-bottom: 20px
+
+      .lSPager.lSpg
+        &>li
+          &:hover,&.active
+            a
+              background: $color-base
+          a
+            background: #d5d5d5
+
+    .lSAction
+      &>a
+        +sprite($arrow-slider)
+        &.lSPrev
+          left: -45px
+          transform: rotate(180deg)
+        &.lSNext
+          right: -45px
+
+  &__item
+    position: relative
+    background: $color-base
+    border-bottom: 3px solid $color-base
+    text-align: left
+
+    &:hover
+      .b-team__photo
+        img
+          transform: scale(1.2)
+
+  &__photo
+    position: relative
+    max-width: 100%
+    overflow: hidden
+    img
+      margin-bottom: -3px
+      max-width: 100%
+      @extend %transition
+
+  &__info
+    position: relative
+    padding: 18px 80px 18px 20px
+    background: #fff
+
+  &__name
+    font-size: 18px
+    margin-bottom: 5px
+
+  &__position
+    color: $gray
+
+  @media #{$desktop}
+    .lSAction
+      display: none
+
+  @media #{$tablet}
+    &__wrap
+      padding: 40px 0 40px
+      margin-top: 40px
+

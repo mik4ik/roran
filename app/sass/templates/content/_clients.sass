@@ -1,0 +1,19 @@
+.b-clients
+  margin-top: 35px
+
+  &__item
+    display: inline-block
+    vertical-align: middle
+
+    &:not(:last-child)
+      margin-right: 30px
+
+  @media #{$desktop}
+    &__item
+      margin: 10px 0
+
+  @media #{$tablet}
+    &__item
+      &:not(:last-child)
+        margin: 10px 15px
+

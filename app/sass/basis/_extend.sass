@@ -1,0 +1,43 @@
+%clearfix
+  &:after, &:before
+    content: ""
+    display: block
+    height: 0
+    clear: both
+    visibility: hidden
+
+%transition
+  transition: all .3s
+
+%link-hover
+  position: relative
+  
+  &:after
+    content: ''
+    position: absolute
+    left: 0
+    bottom: 0
+    width: 0
+    height: 1px
+    background: #fff
+    @extend %transition
+
+  &:hover
+    &:after
+      width: 100%
+
+@mixin col($b: 4, $d: 3, $t: 2, $p: 1)
+  float: left
+  width: percentage(1/$b)
+
+  @media #{$desktop}
+    width: percentage(1/$d)
+
+  @media #{$tablet}
+    width: percentage(1/$t)
+
+  @media #{$mobile}
+    float: none
+    width: percentage(1/$p)
+
+

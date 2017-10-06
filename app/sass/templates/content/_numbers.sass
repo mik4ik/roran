@@ -1,0 +1,83 @@
+.b-numbers
+  margin-top: 70px
+  padding: 60px 0
+  background: #f0f0f0
+  @extend %clearfix
+
+  &__item
+    text-align: left
+    margin-right: 48px
+    +col(4, 4, 2, 1)
+    width: auto
+
+    &:nth-child(1)
+      .b-numbers
+        &__wrap
+          padding-left: 65px
+        &__text
+          margin-left: 5px
+
+    &:nth-child(2)
+      .b-numbers
+        &__wrap
+          padding-left: 75px
+        &__text
+          margin-left: 5px
+
+    &:nth-child(3)
+      .b-numbers
+        &__wrap
+          padding-left: 70px
+
+    &:nth-child(4)
+      margin-right: 0
+      .b-numbers
+        &__wrap
+          padding-left: 80px
+
+  &__wrap
+    position: relative
+    padding-left: 80px
+
+  &__icon
+    position: absolute
+    left: 0
+    top: 7px
+
+  &__num
+    display: block
+    font-weight: 900
+    font-size: 50px
+    color: $color-base
+
+  &__text
+    color: #7a7a7a
+    font-size: 18px
+    white-space: nowrap
+
+  @media #{$desktop}
+    &__item
+      margin-right: 0
+
+    &__icon
+      left: 5px
+      top: 50%
+      transform: translateY(-50%)
+
+    &__num
+      font-size: 40px
+
+    &__text
+      font-size: 16px
+
+  @media #{$tablet}
+    margin-bottom: -30px
+
+    &__item
+      text-align: center
+      margin-bottom: 30px
+
+    &__wrap
+      display: inline-block
+      text-align: left
+

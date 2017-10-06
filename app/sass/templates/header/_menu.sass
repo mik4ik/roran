@@ -1,0 +1,28 @@
+.b-menu
+  position: absolute
+  line-height: 63px
+  height: 63px
+  width: 100%
+  background: #fff
+  text-align: center
+  border-bottom: 1px solid #dfdfdf
+  z-index: 100
+  @extend %clearfix
+
+  &--fixed
+    position: fixed
+    top: 0
+    width: 100%
+
+  &__logo
+    float: left
+    font-weight: 900
+    font-size: 30px
+
+  @media #{$tablet}
+    padding-right: 35px
+
+    &__logo
+      float: left
+      font-weight: 900
+      font-size: 25px

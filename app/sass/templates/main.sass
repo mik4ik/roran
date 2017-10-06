@@ -1,0 +1,25 @@
+@import "footer/main"
+@import "content/main"
+@import "header/main"
+
+body
+  font-family: $font-base
+  font-size: 14px
+  font-weight: normal
+  color: $black
+
+.b-container
+  max-width: 940px
+  padding: 0 10px
+  margin: 0 auto
+
+  @media #{$tablet}
+    padding: 0 20px
+
+
+.e-dotted
+  &:after
+    content: '.'
+    color: $color-base
+    margin-left: 5px
+

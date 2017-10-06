@@ -1,0 +1,32 @@
+.c-social
+  float: right
+
+  &__item
+    vertical-align: middle
+    opacity: .5
+    margin-right: 15px
+    @extend %transition
+
+    &:hover
+      opacity: 1
+
+  &--team
+    position: absolute
+    right: 20px
+    top: 20px
+    .c-social__item
+      &:last-child
+        margin-right: 0
+
+  &--footer
+    .c-social__item
+    opacity: 1
+    &:hover
+      opacity: .8
+
+  @media #{$mobile}
+    &--footer
+      float: none
+      display: block
+      text-align: center
+

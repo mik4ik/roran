@@ -1,0 +1,22 @@
+{
+  "name": "Roran",
+  "description": "Roran project",
+  "main": "index.js",
+  "authors": [
+    "Batashov Nikolay"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "lightslider": "^1.1.6",
+    "jquery": "^3.2.1",
+    "mixitup": "bower-mixitup#^2.0.4"
+  }
+}

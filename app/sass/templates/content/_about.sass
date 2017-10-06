@@ -1,0 +1,52 @@
+.b-about
+  @extend %clearfix
+
+  &__item
+    +col(3, 3, 1, 1)
+
+    &:first-child
+      .b-about__wrap
+        margin-left: 0
+
+    &:last-child
+      .b-about__wrap
+        margin-right: 0
+
+  &__wrap
+    position: relative
+    padding: 95px 10px 0
+    max-width: 230px
+    margin: 0 auto
+
+  &__icon
+    position: absolute
+    top: 0
+    left: 50%
+    transform: translateX(-50%)
+
+  &__title
+    margin-bottom: 30px
+    font-size: 18px
+
+    strong
+      color: $color-base
+
+  &__text
+    font-size: 13px
+    line-height: 18px
+
+  @media #{$tablet}
+    margin-bottom: -35px
+
+    &__item
+      margin-bottom: 35px
+      &:first-child,&:last-child
+        .b-about__wrap
+          margin: 0 auto
+
+    &__wrap
+      padding-top: 80px
+
+    &__title
+      margin-bottom: 20px
+

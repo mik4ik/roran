@@ -1,0 +1,55 @@
+.b-quote
+  position: relative
+  max-width: 800px
+  margin: 0 auto
+
+  &__text
+    font-size: 21px
+    line-height: 28px
+
+    &:before,&:after
+      content: ''
+      position: absolute
+      display: inline-block
+      margin-left: -80px
+      margin-top: -22px
+      +sprite($quote)
+
+    &:after
+      margin: 18px 0 0 17px
+
+    strong
+      font-weight: 600
+
+  &__author
+    position: relative
+    padding-top: 25px
+    margin-top: 25px
+    font-size: 18px
+
+    &:after
+      content: ''
+      position: absolute
+      width: 110px
+      height: 1px
+      top: 0
+      left: 50%
+      background: #fff
+      transform: translate(-50%)
+
+  @media #{$desktop}
+    &__text
+      font-size: 18px
+
+      &:before,&:after
+        top: -30px
+        left: 50%
+        transform: scale(.5) translateX(-50%)
+
+      &:after
+        top: inherit
+        bottom: -60px
+
+    &__author
+      font-size: 16px
+

@@ -1,0 +1,52 @@
+.b-footer
+  position: relative
+  background: #d8d8d8
+  height: 65px
+  line-height: 65px
+  @extend %clearfix
+
+  &__copyright
+    display: inline-block
+    font-size: 15px
+    color: #737373
+
+  &__up
+    position: absolute
+    cursor: pointer
+    left: 50%
+    margin-top: 10px
+    transform: rotate(-90deg) translateX(-50%)
+    +sprite($arrow-slider)
+    @extend %transition
+
+    &:after
+      content: ''
+      position: absolute
+      width: 25px
+      height: 25px
+      left: -5px
+      top: 0
+
+    &:hover
+      margin-top: 5px
+
+
+  @media #{$tablet}
+    &__copyright
+      font-size: 12px
+
+  @media #{$mobile}
+    padding-top: 15px
+    line-height: 1
+    height: auto
+    &__copyright
+      display: block
+      float: none
+      text-align: center
+      font-size: 12px
+      padding: 15px 0
+
+    &__up
+      display: none
+
+
