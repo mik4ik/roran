@@ -74,7 +74,7 @@ gulp.task('build', ['clean', 'sass', 'scripts'], function() {
     gulp.src('app/img/**/*')
         .pipe(gulp.dest('dist/img'));
 
-    gulp.src('app/js/**/*')
+    gulp.src('app/js/scripts.min.js')
         .pipe(gulp.dest('dist/js'));
 
     gulp.src('app/*.html')

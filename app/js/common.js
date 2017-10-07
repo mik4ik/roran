@@ -56,6 +56,10 @@ $(document).ready(function() {
                     easing: "swing"
                 });
             }
+            if ($('.m-btn').length) {
+                $('.m-btn').toggleClass('open');
+                $('.c-nav').slideToggle();
+            }
             return false;
         });
 
@@ -64,7 +68,7 @@ $(document).ready(function() {
 
     function anchorCurrent() {
         $(window).scroll(function () {
-            if($(window).scrollTop() >= $('.b-header').height() + 100){
+            if($(window).scrollTop() >= $('.b-header').height() + 115){
                 $('.b-menu').addClass('b-menu--fixed');
             }else {
                 $('.b-menu').removeClass('b-menu--fixed');
@@ -94,6 +98,7 @@ $(document).ready(function() {
             });
         } else if ($(window).width() > 768 && $('.m-btn').length) {
             $('.m-btn').remove();
+            $('.c-nav').css('display', '');
         }
     }
     btnMobile();
